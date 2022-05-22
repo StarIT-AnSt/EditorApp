@@ -7,6 +7,7 @@ namespace EditorApp.Lib.Csv
 {
     public class CsvFile : File, IFile
     {
+        public CsvFile() : base() {}
         public CsvFile(string path, object content) : base(path, content) { }
 
         public async Task Save()

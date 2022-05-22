@@ -3,8 +3,9 @@
     public abstract class File
     {
         protected string path;
-        protected object content;
+        public object content;
 
+        protected File() {}
         protected File(string path, object content)
         {
             this.path = path;

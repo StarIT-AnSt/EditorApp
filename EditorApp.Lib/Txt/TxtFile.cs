@@ -7,6 +7,7 @@ namespace EditorApp.Lib.Txt
 {
     public class TxtFile : File, IFile
     {
+        public TxtFile() : base() {}
         public TxtFile(string path, string content) : base(path, content) { }
 
         public async Task Save()

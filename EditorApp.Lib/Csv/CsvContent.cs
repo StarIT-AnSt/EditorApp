@@ -31,19 +31,19 @@ namespace EditorApp.Lib.Csv
         {
             var temp = new StringBuilder();
 
-            foreach (var str in _header)
+            for (int i = 0; i < _header.Count; i++)
             {
-                temp.Append($"{str};");
+                temp.Append(i == _header.Count - 1 ? $"{_header[i]}" : $"{_header[i]};");
             }
             temp.Append("\r\n");
 
-            foreach (var str in _content)
+            for (int i = 0; i < _content.Count; i++)
             {
-                foreach (var item in str)
+                for (int j = 0; j < _content[i].Count; j++)
                 {
-                    temp.Append($"{item};");
+                    temp.Append(j == _content[i].Count - 1 ? $"{_content[i][j]}" : $"{_content[i][j]};");
                 }
-                temp.Append("\r\n");
+                temp.Append(i == _content.Count - 1 ? "" : "\r\n");
             }
 
             return temp.ToString();
