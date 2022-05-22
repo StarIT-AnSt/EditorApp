@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace EditorApp.Lib
+﻿namespace EditorApp.Lib.Abstract
 {
     public abstract class File
     {

@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace EditorApp.Lib
+namespace EditorApp.Lib.Abstract
 {
     public interface IFile
     {

@@ -1,7 +1,9 @@
 ﻿using System.IO;
 using System.Threading.Tasks;
+using EditorApp.Lib.Abstract;
+using File = EditorApp.Lib.Abstract.File;
 
-namespace EditorApp.Lib
+namespace EditorApp.Lib.Txt
 {
     public class TxtFile : File, IFile
     {
