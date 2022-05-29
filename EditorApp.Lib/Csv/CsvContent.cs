@@ -14,7 +14,7 @@ namespace EditorApp.Lib.Csv
             _header = new List<string>();
             _content = new List<List<string>>();
         }
-
+        
         public void Parser(string str)
         {
             var lines = str.Split("\r\n");
