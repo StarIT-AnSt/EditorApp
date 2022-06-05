@@ -1,6 +1,7 @@
 ﻿using System.IO;
 using System.Threading.Tasks;
 using EditorApp.Lib.Abstract;
+using EditorApp.Lib.Csv;
 using File = EditorApp.Lib.Abstract.File;
 
 namespace EditorApp.Lib.Json
@@ -22,9 +23,14 @@ namespace EditorApp.Lib.Json
             await Save();
         }
 
-        public Task Open(string path)
+        public async Task Open(string path)
         {
-            throw new System.NotImplementedException();
+            this.path = path;
+            using var file = new StreamReader(path);
+            var temp = await file.ReadToEndAsync();
+            var tempContent = new JsonContent();
+            tempContent.Parser(temp);
+            content = tempContent;
         }
 
         public void Create(string path)
