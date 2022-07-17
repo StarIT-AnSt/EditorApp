@@ -7,12 +7,12 @@ namespace EditorApp.Lib.Csv
 {
     public class CsvFile : File, IFile
     {
-        public CsvFile() : base() {}
+        public CsvFile() : base() { }
         public CsvFile(string path, object content) : base(path, content) { }
 
         public async Task Save()
         {
-            await using var file = new StreamWriter(path, append: false);
+            await using var file = new StreamWriter(path, false);
             await file.WriteAsync(content.ToString());
         }
 

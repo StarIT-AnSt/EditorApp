@@ -7,12 +7,12 @@ namespace EditorApp.Lib.Txt
 {
     public class TxtFile : File, IFile
     {
-        public TxtFile() : base() {}
+        public TxtFile() : base() { }
         public TxtFile(string path, string content) : base(path, content) { }
 
         public async Task Save()
         {
-            await using var file = new StreamWriter(path, append: false);
+            await using var file = new StreamWriter(path, false);
             await file.WriteAsync((string)content);
         }
 

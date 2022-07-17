@@ -3,7 +3,6 @@
         xmlns:vm="using:EditorApp.App.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:styles="clr-namespace:Material.Styles;assembly=Material.Styles"
         xmlns:material="using:Material.Icons.Avalonia"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="EditorApp.App.Views.MainWindow"
@@ -11,39 +10,39 @@
         Title="Текстовый редактор">
 
     <Window.DataContext>
-        <vm:MainWindowViewModel/>
+        <vm:MainWindowViewModel />
     </Window.DataContext>
-    
+
     <StackPanel>
         <!-- MENU -->
         <Menu>
             <MenuItem Header="Файл">
-                <MenuItem Header="Создать..."/>
-                <MenuItem Header="Открыть..."/>
-                <Separator/>
-                <MenuItem Header="Сохранить"/>
-                <MenuItem Header="Сохранить как..."/>
-                <Separator/>
-                <MenuItem Header="Закрыть"/>
+                <MenuItem Header="Создать..." />
+                <MenuItem Header="Открыть..." />
+                <Separator />
+                <MenuItem Header="Сохранить" />
+                <MenuItem Header="Сохранить как..." />
+                <Separator />
+                <MenuItem Header="Закрыть" />
             </MenuItem>
-            <MenuItem Header="О программе..."/>
+            <MenuItem Header="О программе..." />
         </Menu>
-        
+
         <!-- TOOLBAR -->
         <StackPanel Orientation="Horizontal">
             <Button Classes="Outline" Margin="2">
-                <material:MaterialIcon Kind="Create" Height="32" Width="32"/>
+                <material:MaterialIcon Kind="Create" Height="32" Width="32" />
             </Button>
             <Button Classes="Outline" Margin="2">
-                <material:MaterialIcon Kind="OpenInApp" Height="32" Width="32"/>
+                <material:MaterialIcon Kind="OpenInApp" Height="32" Width="32" />
             </Button>
             <Button Classes="Outline" Margin="2">
-                <material:MaterialIcon Kind="ContentSaveEdit" Height="32" Width="32"/>
+                <material:MaterialIcon Kind="ContentSaveEdit" Height="32" Width="32" />
             </Button>
         </StackPanel>
-        
+
         <!-- EDITOR -->
-        <TextBox/>
+        <TextBox />
     </StackPanel>
 
 </Window>

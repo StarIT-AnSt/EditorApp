@@ -8,12 +8,12 @@ namespace EditorApp.Lib.Json
 {
     public class JsonFile : File, IFile
     {
-        public JsonFile() : base() {}
-        public JsonFile(string path, object content) : base(path, content) {}
+        public JsonFile() : base() { }
+        public JsonFile(string path, object content) : base(path, content) { }
 
         public async Task Save()
         {
-            await using var file = new StreamWriter(path, append: false);
+            await using var file = new StreamWriter(path, false);
             await file.WriteAsync(content.ToString());
         }
 

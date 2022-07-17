@@ -8,7 +8,7 @@ namespace EditorApp.Lib.Test
     public class TxtFileTest
     {
         private const string Str = "first\r\nвторая строка\r\n";
-        
+
         [Fact]
         public void Create_Test()
         {
@@ -17,7 +17,7 @@ namespace EditorApp.Lib.Test
             var txt = new TxtFile();
             txt.Create("");
             var actual = txt.content.GetType();
-            
+
             Assert.Equal(expected, actual);
         }
 
@@ -29,7 +29,7 @@ namespace EditorApp.Lib.Test
             var txt = new TxtFile();
             await txt.Open("test.txt");
             var actual = txt.content;
-            
+
             Assert.Equal(expected, actual);
         }
 
@@ -42,7 +42,7 @@ namespace EditorApp.Lib.Test
 
             var expected = Str;
             var actual = await File.ReadAllTextAsync("_test.txt");
-            
+
             Assert.Equal(expected, actual);
         }
     }

@@ -25,7 +25,7 @@ namespace EditorApp.Lib.Test
             await temp.Open("test.csv");
 
             var actual = temp.content.ToString();
-            
+
             Assert.Equal(expected, actual);
         }
     }

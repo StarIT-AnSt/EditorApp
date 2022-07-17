@@ -6,7 +6,7 @@ namespace EditorApp.Lib.Json
     public class JsonContent
     {
         private JsonNode _content;
-        public JsonNode Content { get => _content; }
+        public JsonNode Content => _content;
 
         public JsonContent()
         {
@@ -18,7 +18,7 @@ namespace EditorApp.Lib.Json
             _content.Name = null;
             _content.Contents = null;
             _content.Children = null;
-            
+
             var document = JsonDocument.Parse(str);
             var root = document.RootElement;
             switch (root.ValueKind)
@@ -57,7 +57,7 @@ namespace EditorApp.Lib.Json
                 switch (i.ValueKind)
                 {
                     case JsonValueKind.Object:
-                        
+
                         break;
                     case JsonValueKind.Array:
                         item = SetArrayContent(element);
@@ -81,6 +81,7 @@ namespace EditorApp.Lib.Json
 
                 list.Add(item);
             }
+
             return list;
         }
 
@@ -109,7 +110,7 @@ namespace EditorApp.Lib.Json
                         break;
                 }
             }
-            
+
             return children;
         }
 
