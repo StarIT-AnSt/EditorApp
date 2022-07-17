@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EditorApp.Lib", "EditorApp.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EditorApp.Lib.Test", "EditorApp.Lib.Test\EditorApp.Lib.Test.csproj", "{33A4AE4F-3F28-4F9F-8391-43054B923095}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EditorApp.App", "EditorApp.App\EditorApp.App.csproj", "{B4394E6E-0498-4182-A695-136EE517166B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{33A4AE4F-3F28-4F9F-8391-43054B923095}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33A4AE4F-3F28-4F9F-8391-43054B923095}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{33A4AE4F-3F28-4F9F-8391-43054B923095}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4394E6E-0498-4182-A695-136EE517166B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4394E6E-0498-4182-A695-136EE517166B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4394E6E-0498-4182-A695-136EE517166B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4394E6E-0498-4182-A695-136EE517166B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
