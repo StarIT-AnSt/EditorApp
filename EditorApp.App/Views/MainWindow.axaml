@@ -30,14 +30,23 @@
 
         <!-- TOOLBAR -->
         <StackPanel Orientation="Horizontal">
-            <Button Classes="Outline" Margin="2">
-                <material:MaterialIcon Kind="Create" Height="32" Width="32" />
+            <Button Classes="Outline"
+                    Margin="2"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Stretch">
+                <material:MaterialIcon Kind="Create" Height="32" />
             </Button>
-            <Button Classes="Outline" Margin="2">
-                <material:MaterialIcon Kind="OpenInApp" Height="32" Width="32" />
+            <Button Classes="Outline"
+                    Margin="2"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Stretch">
+                <material:MaterialIcon Kind="OpenInApp" Height="32" />
             </Button>
-            <Button Classes="Outline" Margin="2">
-                <material:MaterialIcon Kind="ContentSaveEdit" Height="32" Width="32" />
+            <Button Classes="Outline"
+                    Margin="2"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Stretch">
+                <material:MaterialIcon Kind="ContentSaveEdit" Height="32" />
             </Button>
         </StackPanel>
 
