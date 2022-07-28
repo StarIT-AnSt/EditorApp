@@ -1,7 +1,6 @@
 ﻿using System.IO;
 using System.Threading.Tasks;
 using EditorApp.Lib.Abstract;
-using EditorApp.Lib.Csv;
 using File = EditorApp.Lib.Abstract.File;
 
 namespace EditorApp.Lib.Json
@@ -11,32 +10,32 @@ namespace EditorApp.Lib.Json
         public JsonFile() : base() { }
         public JsonFile(string path, object content) : base(path, content) { }
 
-        public async Task Save()
+        public override async Task Save()
         {
-            await using var file = new StreamWriter(path, false);
-            await file.WriteAsync(content.ToString());
+            await using var file = new StreamWriter(Path, false);
+            await file.WriteAsync(Content.ToString());
         }
 
-        public async Task SaveAs(string path)
+        public override async Task SaveAs(string path)
         {
-            this.path = path;
+            this.Path = path;
             await Save();
         }
 
-        public async Task Open(string path)
+        public override async Task Open(string path)
         {
-            this.path = path;
+            this.Path = path;
             using var file = new StreamReader(path);
             var temp = await file.ReadToEndAsync();
             var tempContent = new JsonContent();
             tempContent.Parser(temp);
-            content = tempContent;
+            Content = tempContent;
         }
 
-        public void Create(string path)
+        public override void Create(string path)
         {
-            this.path = path;
-            content = new JsonContent();
+            this.Path = path;
+            Content = new JsonContent();
         }
     }
 }

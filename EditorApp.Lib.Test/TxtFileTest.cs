@@ -16,7 +16,7 @@ namespace EditorApp.Lib.Test
 
             var txt = new TxtFile();
             txt.Create("");
-            var actual = txt.content.GetType();
+            var actual = txt.Content.GetType();
 
             Assert.Equal(expected, actual);
         }
@@ -28,7 +28,7 @@ namespace EditorApp.Lib.Test
 
             var txt = new TxtFile();
             await txt.Open("test.txt");
-            var actual = txt.content;
+            var actual = txt.Content;
 
             Assert.Equal(expected, actual);
         }
@@ -37,7 +37,7 @@ namespace EditorApp.Lib.Test
         public async Task Save_Test()
         {
             var txt = new TxtFile();
-            txt.content = Str;
+            txt.Content = Str;
             await txt.SaveAs("_test.txt");
 
             var expected = Str;

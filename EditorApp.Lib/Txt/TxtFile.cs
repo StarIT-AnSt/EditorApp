@@ -1,38 +1,37 @@
 ﻿using System.IO;
 using System.Threading.Tasks;
-using EditorApp.Lib.Abstract;
 using File = EditorApp.Lib.Abstract.File;
 
 namespace EditorApp.Lib.Txt
 {
-    public class TxtFile : File, IFile
+    public class TxtFile : File
     {
         public TxtFile() : base() { }
         public TxtFile(string path, string content) : base(path, content) { }
 
-        public async Task Save()
+        public override async Task Save()
         {
-            await using var file = new StreamWriter(path, false);
-            await file.WriteAsync((string)content);
+            await using var file = new StreamWriter(Path, false);
+            await file.WriteAsync((string)Content);
         }
 
-        public async Task SaveAs(string path)
+        public override async Task SaveAs(string path)
         {
-            this.path = path;
+            this.Path = path;
             await Save();
         }
 
-        public async Task Open(string path)
+        public override async Task Open(string path)
         {
-            this.path = path;
+            this.Path = path;
             using var file = new StreamReader(path);
-            content = await file.ReadToEndAsync();
+            Content = await file.ReadToEndAsync();
         }
 
-        public void Create(string path)
+        public override void Create(string path)
         {
-            this.path = path;
-            content = string.Empty;
+            this.Path = path;
+            Content = string.Empty;
         }
     }
 }

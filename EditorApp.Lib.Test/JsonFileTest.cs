@@ -17,7 +17,7 @@ namespace EditorApp.Lib.Test
 
             await temp.Open("test.json");
 
-            var actual = (temp.content as JsonContent)?.Content;
+            var actual = (temp.Content as JsonContent)?.Content;
 
             Assert.Equal(expected, actual);
         }

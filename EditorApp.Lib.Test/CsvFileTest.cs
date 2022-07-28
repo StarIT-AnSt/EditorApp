@@ -13,7 +13,7 @@ namespace EditorApp.Lib.Test
             var csv = new CsvFile();
             csv.Create("");
 
-            Assert.IsType<CsvContent>(csv.content);
+            Assert.IsType<CsvContent>(csv.Content);
         }
 
         [Fact]
@@ -24,7 +24,7 @@ namespace EditorApp.Lib.Test
             var temp = new CsvFile();
             await temp.Open("test.csv");
 
-            var actual = temp.content.ToString();
+            var actual = temp.Content.ToString();
 
             Assert.Equal(expected, actual);
         }
