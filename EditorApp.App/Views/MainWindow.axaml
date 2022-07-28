@@ -17,7 +17,8 @@
         <!-- MENU -->
         <Menu>
             <MenuItem Header="Файл">
-                <MenuItem Header="Создать..." />
+                <MenuItem Header="Создать..."
+                          Command="{Binding CreateFileCommand}"/>
                 <MenuItem Header="Открыть..." />
                 <Separator />
                 <MenuItem Header="Сохранить" />
@@ -33,7 +34,8 @@
             <Button Classes="Outline"
                     Margin="2"
                     HorizontalAlignment="Left"
-                    VerticalAlignment="Stretch">
+                    VerticalAlignment="Stretch"
+                    Command="{Binding CreateFileCommand}">
                 <material:MaterialIcon Kind="Create" Height="32" />
             </Button>
             <Button Classes="Outline"
@@ -51,7 +53,7 @@
         </StackPanel>
 
         <!-- EDITOR -->
-        <TextBox />
+        <TextBox Text="{Binding Output}" />
     </StackPanel>
 
 </Window>

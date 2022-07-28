@@ -17,7 +17,12 @@ namespace EditorApp.App
         {
             if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
             {
-                desktop.MainWindow = new MainWindow { DataContext = new MainWindowViewModel() };
+                var window = new MainWindow();
+                window.DataContext = new MainWindowViewModel
+                {
+                    WindowOwner = window
+                };
+                desktop.MainWindow = window;
             }
 
             base.OnFrameworkInitializationCompleted();
